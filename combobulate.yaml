@@ -1,0 +1,23 @@
+# This configuration assembles an approximation of Stroll TiddlyWiki from a base empty.html
+# and several community plugin libraries.
+layers:
+  # 1. Base Layer: The latest stable empty TiddlyWiki
+  - source: https://tiddlywiki.com/empty.html
+    exclude:
+      # Exclude the default "GettingStarted" tiddler to keep the wiki clean
+      - GettingStarted
+
+  # 2. Flibbles Plugin Library (for Relink)
+  - source: https://flibbles.github.io/tw5-plugins/
+
+  # 3. SQ Plugin Library (for Stories, Editor AutoList)
+  - source: https://sq.github.io/SQ-Plugins/
+
+  # 4. Danielo515 & Snowgoon88 Library (for ContextPlugin, edit-comptext)
+  - source: https://danielo515.github.io/tiddlywiki-plugins/
+
+  # 5. Wikilabs Library (for Link to Tabs)
+  - source: https://wikilabs.github.io/editions/link-to-tabs/
+
+  # 6. Gk0Wk Library (for Sidebar Resizer)
+  - source: https://gk0wk.github.io/TW5-plugins/

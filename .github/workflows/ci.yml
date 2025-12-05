@@ -1,0 +1,43 @@
+name: CI/CD Release
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: {}
+
+jobs:
+  build_and_release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # This is required to create a GitHub Release
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Dagger CLI
+        run: curl -L https://dl.dagger.io/dagger/install.sh | BIN_DIR=/usr/local/bin sh
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Dagger pipeline
+        run: dagger call -m . combobulate --config='combobulate.yaml' > index.html
+        env:
+          DAGGER_CLOUD_TOKEN: ${{ secrets.DAGGER_CLOUD_TOKEN }}
+
+      - name: Generate Timestamp Tag
+        id: tagger
+        run: echo "tag=build-$(date +'%Y-%m-%dT%H-%M-%S')" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: index.html
+          tag_name: ${{ steps.tagger.outputs.tag }}
+          name: Release ${{ steps.tagger.outputs.tag }}
+          body: Automated TiddlyWiki build.
