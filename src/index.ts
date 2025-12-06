@@ -34,7 +34,7 @@ export class TwCombobulator {
       // Handle exclusions if they exist
       if (layer.exclude && layer.exclude.length > 0) {
         const exclusionFilter = layer.exclude
-          .map((t: string) => `"[title[${t}]]"`)
+          .map((t: string) => `[title[${t}]]`)
           .join(" ")
 
         console.log(`Excluding tiddlers: ${exclusionFilter}`)
@@ -42,7 +42,7 @@ export class TwCombobulator {
         sourceDir = this.tiddlywikiContainer()
           .withDirectory("/src", sourceDir)
           .withWorkdir("/src")
-          .withExec(["deletetiddlers", exclusionFilter])
+          .withExec(["--deletetiddlers", exclusionFilter])
           .directory(".")
       }
 
