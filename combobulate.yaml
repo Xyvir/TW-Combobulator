@@ -11,7 +11,7 @@ layers:
   - source: https://flibbles.github.io/tw5-plugins/index.html
 
   # 3. SQ Plugin Library (for Stories, Editor AutoList)
-  - source: https://sq.github.io/SQ-Plugins/index.html
+  - source: https://saqimtiaz.github.io/SQPL/index.html
 
   # 4. Danielo515 & Snowgoon88 Library (for ContextPlugin, edit-comptext)
   # - source: https://danielo515.github.io/tiddlywiki-plugins/
