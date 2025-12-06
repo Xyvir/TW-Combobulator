@@ -54,7 +54,7 @@ export class TwCombobulator {
     console.log("Building final index.html...")
 
     // Add tiddlywiki.info from the repo
-    const tiddlywikiInfoFile = dag.host().file("tiddlywiki.info")
+    const tiddlywikiInfoFile = dag.host.file("tiddlywiki.info")
     const stateWithInfo = state.withFile("tiddlywiki.info", tiddlywikiInfoFile)
 
     const finalWiki = this.tiddlywikiContainer()
@@ -100,7 +100,7 @@ export class TwCombobulator {
 
     // Case 3: Local Directory
     console.log(`Fetching from local path: ${source}`)
-    return dag.host().directory(source)
+    return dag.host.directory(source)
   }
 
   /**
