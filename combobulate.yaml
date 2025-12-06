@@ -8,16 +8,16 @@ layers:
       - GettingStarted
 
   # 2. Flibbles Plugin Library (for Relink)
-  - source: https://flibbles.github.io/tw5-plugins/
+  - source: https://flibbles.github.io/tw5-plugins/index.html
 
   # 3. SQ Plugin Library (for Stories, Editor AutoList)
-  - source: https://sq.github.io/SQ-Plugins/
+  - source: https://sq.github.io/SQ-Plugins/index.html
 
   # 4. Danielo515 & Snowgoon88 Library (for ContextPlugin, edit-comptext)
-  - source: https://danielo515.github.io/tiddlywiki-plugins/
+  # - source: https://danielo515.github.io/tiddlywiki-plugins/
 
   # 5. Wikilabs Library (for Link to Tabs)
-  - source: https://wikilabs.github.io/editions/link-to-tabs/
+  # - source: https://wikilabs.github.io/editions/link-to-tabs/
 
   # 6. Gk0Wk Library (for Sidebar Resizer)
-  - source: https://gk0wk.github.io/TW5-plugins/
+  # - source: https://gk0wk.github.io/TW5-plugins/

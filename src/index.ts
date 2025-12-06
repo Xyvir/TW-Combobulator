@@ -3,7 +3,7 @@ import { dag, Directory, File, object, func, GitRef } from "@dagger.io/dagger"
 import * as yaml from "js-yaml"
 
 @object()
-class TwCombobulator {
+export class TwCombobulator {
   /**
    * The main pipeline entry point for combobulating TiddlyWiki sources.
    * @param config The configuration file defining the layers.
