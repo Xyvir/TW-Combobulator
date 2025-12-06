@@ -8,7 +8,7 @@ layers:
       - GettingStarted
 
   # 2. Flibbles Plugin Library (for Relink)
-  - source: https://flibbles.github.io/tw5-plugins/index.html
+  - source: https://flibbles.github.io/tw5-relink/index.html
 
   # 3. SQ Plugin Library (for Stories, Editor AutoList)
   - source: https://saqimtiaz.github.io/SQPL/index.html
