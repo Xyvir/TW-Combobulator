@@ -52,8 +52,23 @@ export class TwCombobulator {
 
     // 5. Final build step
     console.log("Building final index.html...")
+
+    const tiddlywikiInfo = {
+      build: {
+        index: [
+          "--rendertiddler",
+          "$:/core/save/all",
+          "index.html",
+          "text/plain",
+        ],
+      },
+    }
+
     const finalWiki = this.tiddlywikiContainer()
-      .withDirectory("/src", state)
+      .withDirectory(
+        "/src",
+        state.withFile("tiddlywiki.info", JSON.stringify(tiddlywikiInfo, null, 2))
+      )
       .withWorkdir("/src")
       .withExec(["--build", "index"])
       .file("output/index.html")
