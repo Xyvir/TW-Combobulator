@@ -53,14 +53,9 @@ export class TwCombobulator {
     // 5. Final build step
     console.log("Building final index.html...")
 
-    // Add tiddlywiki.info with themes, as suggested by TiddlyWiki docs
-    const tiddlywikiInfoContent = JSON.stringify({
-      themes: ["tiddlywiki/vanilla", "tiddlywiki/snowwhite"],
-    })
-    const infoDir = dag
-      .directory()
-      .withFile("tiddlywiki.info", tiddlywikiInfoContent)
-    const stateWithInfo = state.withDirectory(".", infoDir)
+    // Add tiddlywiki.info from the repo
+    const tiddlywikiInfoFile = dag.host().file("tiddlywiki.info")
+    const stateWithInfo = state.withFile("tiddlywiki.info", tiddlywikiInfoFile)
 
     const finalWiki = this.tiddlywikiContainer()
       .withDirectory("/src", stateWithInfo)
