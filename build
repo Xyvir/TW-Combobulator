@@ -1,0 +1,1 @@
+./node_modules/.bin/dagger call combobulate --config recipe.yaml > index.html

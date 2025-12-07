@@ -1,2 +1,9 @@
 node_modules
 .vscode
+
+# Usage & Build Artifacts
+dagger.exe
+dagger
+output/
+filtered/
+

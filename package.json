@@ -11,9 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "@dagger.io/dagger": "^0.9.3",
-    "js-yaml": "^4.1.0",
     "@types/js-yaml": "^4.0.5",
+    "js-yaml": "^4.1.0",
     "typescript": "^5.2.2"
-  },
-  "devDependencies": {}
+  }
 }

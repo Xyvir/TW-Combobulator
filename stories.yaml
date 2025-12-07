@@ -1,0 +1,7 @@
+  # 1. Base Layer: Empty TiddlyWiki (No Server)
+  - source: ./empty-no-server.yaml
+
+  # 2. Flibbles Plugin Library (for Relink)
+  - source: https://giffmex.org/stroll/stroll.html
+    include-plugin:
+      - "$:/plugins/sq/Stories"

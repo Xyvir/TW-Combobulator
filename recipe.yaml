@@ -1,0 +1,28 @@
+# This configuration assembles an approximation of Stroll TiddlyWiki from a base empty.html
+# and several community plugin libraries.
+layers:
+
+  # 1. Base Layer: Empty TiddlyWiki (No Server)
+  - source: ./empty-no-server.yaml
+
+  # 2. Flibbles Plugin Library (for Relink)
+  - source: https://flibbles.github.io/tw5-relink/index.html
+    include-plugin:
+      - "$:/plugins/flibbles/relink"
+
+
+  # 4. Danielo515  for ContextPlugin
+  - source: http://contextplugin.tiddlyspot.com/index.html
+    include-plugin:
+      - "$:/plugins/danielo515/ContextPlugin"
+
+  # 5. Snowgoon88  for Edit Comptext
+  - source: https://snowgoon88.github.io/TW5-extendedit/
+    include-plugin:
+      - "$:/plugins/snowgoon88/edit-comptext"
+  
+  # 6. Wikilabs Library (for Link to Tabs)
+  # - source: https://wikilabs.github.io/editions/link-to-tabs/
+
+  # 6. Gk0Wk Library (for Sidebar Resizer) - REFRESH
+  # - source: https://gk0wk.github.io/TW5-plugins/

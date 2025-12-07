@@ -1,1 +1,10 @@
-{"themes": ["tiddlywiki/vanilla","tiddlywiki/snowwhite"]}
+{
+    "description": "Combobulated Wiki",
+    "plugins": [
+
+],
+    "themes": [
+        "tiddlywiki/vanilla",
+        "tiddlywiki/snowwhite"
+    ]
+}

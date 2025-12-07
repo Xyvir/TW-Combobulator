@@ -1,5 +1,6 @@
 {
   "name": "tw-combobulator",
+  "description": "Combobulator module",
   "sdk": "typescript",
-  "engineVersion": "v0.11.0"
+  "engineVersion": "v0.19.8"
 }
